@@ -6,7 +6,7 @@ import store from "../store";
 import Login from "./accounts/Login";
 import ListingPage from "./listings/ListingPage";
 import PrivateRoute from "./common/PrivateRoute";
-import Header from "./layout/navbar/Header";
+import Header from "./layout/Header";
 
 const App = () => {
   return (
