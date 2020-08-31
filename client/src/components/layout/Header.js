@@ -1,8 +1,10 @@
 import React from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
 
 import SearchBar from "./SearchBar";
 
-const Header = () => {
+const Header = ({ isAuthenticated }) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container">
@@ -19,7 +21,11 @@ const Header = () => {
         <a className="navbar-brand" href="/">
           Navbar
         </a>
-
+        {isAuthenticated ? (
+          <p className="font-weight-bold">you are in</p>
+        ) : (
+          <p>Log in</p>
+        )}
         <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
           <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
             <li className="nav-item active">
@@ -35,4 +41,14 @@ const Header = () => {
   );
 };
 
-export default Header;
+Header.propTypes = {
+  // username: PropTypes.string.isRequired,
+  isAuthenticated: PropTypes.func.isRequired,
+};
+
+const mapStateToProps = state => ({
+  // username: state.auth.user.username,
+  isAuthenticated: state.auth.isAuthenticated,
+});
+
+export default connect(mapStateToProps)(Header);

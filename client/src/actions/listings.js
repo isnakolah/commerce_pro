@@ -1,7 +1,7 @@
 import axios from "axios";
 
 import { GET_LISTINGS } from "./types";
-import tokenConfig from "./auth.js";
+import { tokenConfig } from "./auth.js";
 
 export const getListings = () => (dispatch, getState) => {
   axios
