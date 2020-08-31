@@ -4,6 +4,7 @@ import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 
 import { login } from "../../actions/auth";
+import Input from "../common/Input";
 
 const Login = ({ isAuthenticated, login }) => {
   const [state, setState] = useState({

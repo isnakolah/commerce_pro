@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Provider } from "react-redux";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
@@ -6,10 +6,12 @@ import store from "../store";
 import Login from "./accounts/Login";
 import ListingPage from "./listings/ListingPage";
 import PrivateRoute from "./common/PrivateRoute";
+import Header from "./layout/navbar/Header";
 
 const App = () => {
   return (
     <Provider store={store}>
+      <Header />
       <Router>
         <div className="container pt-4">
           <Switch>
