@@ -11,5 +11,7 @@ export default function (state = initialState, action) {
         ...state,
         listings: action.payload,
       };
+    default:
+      return state;
   }
 }
