@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 
 import { login } from "../../actions/auth";
@@ -19,6 +20,10 @@ const Login = ({ isAuthenticated, login }) => {
     e.preventDefault();
     login(username, password);
   };
+
+  if (isAuthenticated) {
+    return <Redirect to="/" />;
+  }
 
   return (
     <>
