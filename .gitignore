@@ -1,5 +1,7 @@
 .venv/
 # Logs
+client/jsconfig.json
+
 logs
 *.log
 npm-debug.log*

@@ -9,9 +9,11 @@ const App = () => {
   return (
     <Provider store={store}>
       <Router>
-        <Switch>
-          <Route exact path="/login" component={Login} />
-        </Switch>
+        <div className="container">
+          <Switch>
+            <Route exact path="/login" component={Login} />
+          </Switch>
+        </div>
       </Router>
     </Provider>
   );
