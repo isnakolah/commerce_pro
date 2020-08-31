@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { Provider } from "react-redux";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import store from "../store";
+import Login from "./accounts/Login";
 
 const App = () => {
   return (
     <Provider store={store}>
-      <div className="jumbotron text-center font-weight-bold">
-        <p>Works</p>
-      </div>
+      <Router>
+        <Switch>
+          <Route exact path="/login" component={Login} />
+        </Switch>
+      </Router>
     </Provider>
   );
 };
