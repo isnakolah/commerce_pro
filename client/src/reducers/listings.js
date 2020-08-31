@@ -1,7 +1,15 @@
+import { GET_LISTINGS } from "../actions/types";
+
 const initialState = {
   listings: [],
 };
 
 export default function (state = initialState, action) {
-  return state;
+  switch (action.type) {
+    case GET_LISTINGS:
+      return {
+        ...state,
+        listings: action.payload,
+      };
+  }
 }
