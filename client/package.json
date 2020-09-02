@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "author": "",
+  "author": "Daniel Nakolah",
   "proxy": "http://localhost:8000",
   "plugins": [
     "transform-object-rest-spread"
