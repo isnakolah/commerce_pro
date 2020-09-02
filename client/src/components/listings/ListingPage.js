@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { getListings } from "../../actions/listings";
+import { getListings } from "../../redux/actions/listings";
 
 const ListingPage = ({ getListings, listings }) => {
   useEffect(() => {

@@ -12,7 +12,7 @@ import {
 export const loadUser = () => (dispatch, getState) => {
   // User Loading
   dispatch({ type: USER_LOADING });
-
+  console.log(tokenConfig(getState));
   axios
     .get("/api/auth/user", tokenConfig(getState))
     .then(res => {
@@ -54,6 +54,7 @@ export const login = (username, password) => dispatch => {
 export const tokenConfig = getState => {
   // Get the token from the state
   const token = getState().auth.token;
+  console.log(token);
 
   // Headers
   const config = {
