@@ -4,7 +4,7 @@ const Register = () => {
   return (
     <div>
       <h2>Register</h2>
-      <form action="{% url 'auctions:register' %}" method="post">
+      <form>
         <div class="form-group">
           <input
             class="form-control"
@@ -39,8 +39,7 @@ const Register = () => {
         </div>
         <input class="btn btn-primary" type="submit" value="Register" />
       </form>
-      Already have an account?{" "}
-      <a href="{% url 'auctions:login' %}">Log In here.</a>
+      Already have an account? Login here.
     </div>
   );
 };
