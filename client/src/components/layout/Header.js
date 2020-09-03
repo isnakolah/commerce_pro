@@ -7,7 +7,7 @@ import SearchBar from "./SearchBar";
 const Header = () => {
   return (
     <nav class="navbar navbar-expand-lg navbar-light bg-info">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="/">
         <h3 class="mb-0">Auctions</h3>
       </a>
       <button
