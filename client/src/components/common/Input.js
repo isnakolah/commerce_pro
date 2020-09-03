@@ -15,7 +15,6 @@ const Input = props => {
         placeholder={placeholder ? placeholder : label}
         aria-placeholder={placeholder ? placeholder : label}
         aria-label={placeholder ? placeholder : label}
-        aria-placeholder={label}
       />
     </div>
   );

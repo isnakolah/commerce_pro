@@ -7,6 +7,7 @@ import Login from "./accounts/Login";
 import Register from "./accounts/Register";
 import ListingsPage from "./listings/ListingsPage";
 import ListingDatailPage from "./listings/ListingDetailPage";
+import NotFoundPage from "./notfoundpage/NotFoundPage";
 import Header from "./layout/Header";
 import { loadUser } from "../redux/actions/auth";
 
@@ -20,9 +21,10 @@ const App = () => {
       <div className="container pt-4">
         <Switch>
           <Route exact path="/" component={ListingsPage} />
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/register" component={Register} />
-          <Route exact path="/listingDetail" component={ListingDatailPage} />
+          <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
+          <Route path="/listingDetail" component={ListingDatailPage} />
+          <Route component={NotFoundPage} />
         </Switch>
       </div>
     </Provider>

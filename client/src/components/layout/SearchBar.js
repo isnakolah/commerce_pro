@@ -7,10 +7,12 @@ const SearchBar = () => {
   const onChange = ({ target }) => {
     setSearch(target.value);
   };
+
   const onSubmit = e => {
     e.preventDefault();
     console.log(search);
   };
+
   return (
     <div>
       <form className="form-inline my-2 my-lg-0" onSubmit={onSubmit}>
@@ -20,6 +22,7 @@ const SearchBar = () => {
           name="search"
           placeholder="Search"
           value={search}
+          onChange={onChange}
         />
         <button
           className="btn btn-outline-light my-2 my-sm-0 rounded"
