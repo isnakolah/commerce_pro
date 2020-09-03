@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
 import { getListings } from "../../redux/actions/listings";
-import Listing from "./Listing";
+import ListingCard from "./ListingCard";
 
 const ListingPage = ({ getListings, listings }) => {
   useEffect(() => {
@@ -14,7 +14,7 @@ const ListingPage = ({ getListings, listings }) => {
       <h1>Listings</h1>
       <div className="row">
         {listings.map(listing => (
-          <Listing listing={listing} key={listing.id} />
+          <ListingCard listing={listing} key={listing.id} />
         ))}
       </div>
     </div>

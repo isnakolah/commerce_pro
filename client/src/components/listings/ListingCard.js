@@ -29,12 +29,14 @@ const Listing = ({ listing }) => {
 
           <div className="col-md-8">
             <div className="float-right p-3">
-              <a href="#" className="btn btn-danger btn-sm">
+              <a href="#" className="btn btn-danger btn-sm rounded">
                 Closed
               </a>
             </div>
             <div className="float-right p-3">
-              <a href="#" className="btn btn-outline-info btn-sm listing_url">
+              <a
+                href="#"
+                className="btn btn-outline-info btn-sm listing_url rounded">
                 Bid
               </a>
             </div>
@@ -53,7 +55,7 @@ const Listing = ({ listing }) => {
                 Expired <i>{expiry_date}</i> ago.
               </p>
               <p className="card-text">
-                Winning bid was <strong>$ highest bid</strong>
+                Winning bid was <strong>$ 0</strong>
               </p>
               <p className="card-text">
                 Expires in <i>{expiry_date}</i>.

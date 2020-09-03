@@ -39,7 +39,7 @@ const Login = ({ login }) => {
           value={password}
           onChange={onChange}
         />
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-primary rounded">
           Submit
         </button>
       </form>
