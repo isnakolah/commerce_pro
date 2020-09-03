@@ -1,17 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Input = ({ label, onChange, name, value, type }) => {
+const Input = props => {
+  const { label, onChange, name, value, type, className, placeholder } = props;
   return (
     <div className="form-group">
       <label htmlFor={name}>{label}</label>
       <input
         type={type ? type : "text"}
         name={name}
-        className="form-control"
+        className={className ? className : "form-control"}
         onChange={onChange}
         value={value}
-        placeholder={label}
+        placeholder={placeholder ? placeholder : label}
+        aria-placeholder={placeholder ? placeholder : label}
+        aria-label={placeholder ? placeholder : label}
         aria-placeholder={label}
       />
     </div>
@@ -19,10 +22,13 @@ const Input = ({ label, onChange, name, value, type }) => {
 };
 
 Input.propTypes = {
-  label: PropTypes.string.isRequired,
+  label: PropTypes.string,
   onChange: PropTypes.func.isRequired,
   name: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
+  type: PropTypes.string,
+  className: PropTypes.string,
+  placeholder: PropTypes.string,
 };
 
 export default Input;
