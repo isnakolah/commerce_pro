@@ -12,6 +12,14 @@ const Bidding = () => {
     console.log("submit");
   };
 
+  const buyNow = () => {
+    console.log("Buy now");
+  };
+
+  const watchlist = () => {
+    console.log("watchlist");
+  };
+
   return (
     <div className="row">
       <div className="col-sm-6">
@@ -35,10 +43,16 @@ const Bidding = () => {
       </div>
 
       <div className="col-sm-6 float-right pr-0">
-        <a href="#" className="btn btn-outline-success mr-2 rounded">
+        <a
+          href="#"
+          className="btn btn-outline-success mr-2 rounded"
+          onClick={buyNow}>
           Buy Now
         </a>
-        <a href="#" className="btn btn-outline-info rounded">
+        <a
+          href="#"
+          className="btn btn-outline-info rounded"
+          onClick={watchlist}>
           Watchlist
         </a>
       </div>
