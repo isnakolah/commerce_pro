@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 
 import { login } from "../../redux/actions/auth";
 import Input from "../common/Input";
@@ -45,7 +46,7 @@ const Login = ({ login }) => {
       </form>
       <br />
       <p>
-        Don't have an account? Register <a href="/register">here</a>.
+        Don't have an account? Register <Link to="register">here</Link>.
       </p>
     </>
   );

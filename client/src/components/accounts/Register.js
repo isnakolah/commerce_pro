@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import Input from "../common/Input";
 
@@ -59,7 +60,7 @@ const Register = () => {
       </form>
       <br />
       <p>
-        Already have an account? Login <a href="/login">here</a>.
+        Already have an account? Login <Link to="login">here</Link>.
       </p>
     </div>
   );

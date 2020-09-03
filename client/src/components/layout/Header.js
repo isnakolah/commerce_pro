@@ -3,6 +3,9 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
 import SearchBar from "./SearchBar";
+import HeaderLinks from "../common/HeaderLinks";
+
+const guestLinks = "";
 
 const Header = () => {
   return (
@@ -24,33 +27,11 @@ const Header = () => {
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
-            <li className="nav-item active">
-              <a className="nav-link" href="/">
-                Active Listings
-              </a>
-            </li>
-
-            <li className="nav-item active">
-              <a className="nav-link" href="/listingDetail">
-                All Listings
-              </a>
-            </li>
-
-            <li className="nav-item">
-              <a className="nav-link" href="/logout">
-                Log Out
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/login">
-                Log In
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/register">
-                Register
-              </a>
-            </li>
+            <HeaderLinks to="/" label="Active Listings" />
+            <HeaderLinks to="/listingDetail" label="All Listings" />
+            <HeaderLinks to="/logout" label="Log Out" />
+            <HeaderLinks to="/login" label="Login" />
+            <HeaderLinks to="/register" label="Register" />
           </ul>
           <SearchBar />
         </div>

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Provider } from "react-redux";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 import store from "../redux/store";
 import Login from "./accounts/Login";
@@ -17,16 +17,14 @@ const App = () => {
   return (
     <Provider store={store}>
       <Header />
-      <Router>
-        <div className="container pt-4">
-          <Switch>
-            <Route exact path="/" component={ListingsPage} />
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/register" component={Register} />
-            <Route exact path="/listingDetail" component={ListingDatailPage} />
-          </Switch>
-        </div>
-      </Router>
+      <div className="container pt-4">
+        <Switch>
+          <Route exact path="/" component={ListingsPage} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/register" component={Register} />
+          <Route exact path="/listingDetail" component={ListingDatailPage} />
+        </Switch>
+      </div>
     </Provider>
   );
 };
