@@ -1,9 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 import "./NotFoundPage.css";
 
 const NotFoundPage = () => {
+  const history = useHistory();
+
   return (
     <>
       <div id="background"></div>
@@ -31,7 +33,13 @@ const NotFoundPage = () => {
         <h5>Oops, seems this page is not available!</h5>
         <div className="center"></div>
         <div className="buttons">
-          <button className="btn btn-outline-warning rounded mr-3">Back</button>
+          <button
+            className="btn btn-outline-warning rounded mr-3"
+            onClick={() => {
+              history.goBack();
+            }}>
+            Back
+          </button>
           <button className="btn btn-outline-success rounded">
             <Link to="" className="no-style">
               Home

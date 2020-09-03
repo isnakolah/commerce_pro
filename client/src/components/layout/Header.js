@@ -37,9 +37,9 @@ const Header = ({ isAuthenticated }) => {
           <ul className="navbar-nav mr-auto">
             <HeaderLinks to="/" label="Active Listings" />
             <HeaderLinks to="/listingDetail" label="All Listings" />
+            <SearchBar />
             {isAuthenticated ? userLinks : guestLinks}
           </ul>
-          <SearchBar />
         </div>
       </div>
     </nav>
