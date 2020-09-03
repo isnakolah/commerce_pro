@@ -51,11 +51,12 @@ const Register = () => {
           value={password2}
           onChange={onChange}
         />
-        <br />
         <input class="btn btn-primary" type="submit" value="Register" />
       </form>
       <br />
-      Already have an account? Login here.
+      <p>
+        Already have an account? Login <a href="/login">here</a>.
+      </p>
     </div>
   );
 };

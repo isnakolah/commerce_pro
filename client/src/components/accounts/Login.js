@@ -23,6 +23,8 @@ const Login = ({ login }) => {
 
   return (
     <>
+      <h2>Login</h2>
+      <hr />
       <form onSubmit={onSubmit}>
         <Input
           label="Username"
@@ -41,6 +43,10 @@ const Login = ({ login }) => {
           Submit
         </button>
       </form>
+      <br />
+      <p>
+        Don't have an account? Register <a href="/register">here</a>.
+      </p>
     </>
   );
 };
