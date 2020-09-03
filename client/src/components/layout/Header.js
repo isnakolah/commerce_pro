@@ -4,7 +4,8 @@ import PropTypes from "prop-types";
 
 import SearchBar from "./SearchBar";
 
-const Header = ({ isAuthenticated }) => {
+const Header = () => {
+  const authTest = <h4>Auth passed</h4>;
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container">
@@ -38,7 +39,7 @@ const Header = ({ isAuthenticated }) => {
 
 Header.propTypes = {
   // username: PropTypes.string.isRequired,
-  isAuthenticated: PropTypes.func.isRequired,
+  isAuthenticated: PropTypes.bool.isRequired,
 };
 
 const mapStateToProps = state => ({

@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import store from "../redux/store";
 import Login from "./accounts/Login";
-import ListingPage from "./listings/ListingPage";
+import ListingsPage from "./listings/ListingsPage";
 import PrivateRoute from "./common/PrivateRoute";
 import Header from "./layout/Header";
 import { loadUser } from "../redux/actions/auth";
@@ -19,7 +19,7 @@ const App = () => {
       <Router>
         <div className="container pt-4">
           <Switch>
-            <PrivateRoute exact path="/" component={ListingPage} />
+            <Route exact path="/" component={ListingsPage} />
             <Route exact path="/login" component={Login} />
           </Switch>
         </div>

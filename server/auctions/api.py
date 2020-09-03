@@ -6,7 +6,7 @@ from .serializers import ListingSerializer, CategorySerializer, BidSerializer, C
 
 class ListingViewSet(viewsets.ModelViewSet):
     permission_classes = [
-        permissions.IsAuthenticated
+        permissions.AllowAny
     ]
     serializer_class = ListingSerializer
 
