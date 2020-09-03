@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 
 import { login } from "../../redux/actions/auth";
 import Input from "../common/Input";
 
-const Login = ({ isAuthenticated, login }) => {
+const Login = ({ login }) => {
   const [state, setState] = useState({
     username: "",
     password: "",
@@ -21,10 +20,6 @@ const Login = ({ isAuthenticated, login }) => {
     e.preventDefault();
     login(username, password);
   };
-
-  if (isAuthenticated) {
-    return <Redirect to="/" />;
-  }
 
   return (
     <>
@@ -59,11 +54,6 @@ const Login = ({ isAuthenticated, login }) => {
 
 Login.propTypes = {
   login: PropTypes.func.isRequired,
-  isAuthenticated: PropTypes.bool,
 };
 
-const mapStateToProps = state => ({
-  isAuthenticated: state.auth.isAuthenticated,
-});
-
-export default connect(mapStateToProps, { login })(Login);
+export default connect(null, { login })(Login);
