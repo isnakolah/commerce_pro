@@ -6,8 +6,16 @@ import { Link } from "react-router-dom";
 import SearchBar from "./SearchBar";
 import HeaderLinks from "../common/HeaderLinks";
 
-const Header = () => {
-  const guestLinks = "";
+const Header = ({ isAuthenticated }) => {
+  const guestLinks = (
+    <>
+      <HeaderLinks to="/login" label="Login" />
+      <HeaderLinks to="/register" label="Register" />
+    </>
+  );
+
+  const userLinks = <HeaderLinks to="/logout" label="Log Out" />;
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-info">
       <div className="container">
@@ -29,9 +37,7 @@ const Header = () => {
           <ul className="navbar-nav mr-auto">
             <HeaderLinks to="/" label="Active Listings" />
             <HeaderLinks to="/listingDetail" label="All Listings" />
-            <HeaderLinks to="/logout" label="Log Out" />
-            <HeaderLinks to="/login" label="Login" />
-            <HeaderLinks to="/register" label="Register" />
+            {isAuthenticated ? userLinks : guestLinks}
           </ul>
           <SearchBar />
         </div>
