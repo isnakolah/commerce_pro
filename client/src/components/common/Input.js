@@ -11,6 +11,7 @@ const Input = ({ label, onChange, name, value, type }) => {
         className="form-control"
         onChange={onChange}
         value={value}
+        placeholder={label}
       />
     </div>
   );

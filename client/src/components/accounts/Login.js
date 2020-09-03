@@ -24,26 +24,19 @@ const Login = ({ login }) => {
   return (
     <>
       <form onSubmit={onSubmit}>
-        <div className="form-group">
-          <label htmlFor="exampleInputEmail1">Username</label>
-          <input
-            type="text"
-            className="form-control"
-            name="username"
-            value={username}
-            onChange={onChange}
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="exampleInputPassword1">Password</label>
-          <input
-            type="password"
-            className="form-control"
-            name="password"
-            value={password}
-            onChange={onChange}
-          />
-        </div>
+        <Input
+          label="Username"
+          name="username"
+          value={username}
+          onChange={onChange}
+        />
+        <Input
+          label="Password"
+          type="password"
+          name="password"
+          value={password}
+          onChange={onChange}
+        />
         <button type="submit" className="btn btn-primary">
           Submit
         </button>
