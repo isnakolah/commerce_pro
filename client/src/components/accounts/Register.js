@@ -51,7 +51,7 @@ const Register = () => {
           value={password2}
           onChange={onChange}
         />
-        <input class="btn btn-primary" type="submit" value="Register" />
+        <input className="btn btn-primary" type="submit" value="Register" />
       </form>
       <br />
       <p>
