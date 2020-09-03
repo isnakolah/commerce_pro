@@ -15,7 +15,7 @@ const Listing = ({ listing }) => {
   } = listing;
 
   return (
-    <div className="col-sm-6 px-2 listing">
+    <div className="col-sm-6 px-2 listing ">
       <div className="card mb-4" style={{ height: 230, cursor: "pointer" }}>
         <div className="row">
           <div className="col-md-4">

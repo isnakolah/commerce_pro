@@ -6,6 +6,7 @@ import store from "../redux/store";
 import Login from "./accounts/Login";
 import Register from "./accounts/Register";
 import ListingsPage from "./listings/ListingsPage";
+import ListingDatailPage from "./listings/ListingDetailPage";
 import Header from "./layout/Header";
 import { loadUser } from "../redux/actions/auth";
 
@@ -22,6 +23,7 @@ const App = () => {
             <Route exact path="/" component={ListingsPage} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" component={Register} />
+            <Route exact path="/listingDetail" component={ListingDatailPage} />
           </Switch>
         </div>
       </Router>
