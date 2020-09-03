@@ -5,10 +5,9 @@ import PropTypes from "prop-types";
 import SearchBar from "./SearchBar";
 
 const Header = () => {
-  const authTest = <h4>Auth passed</h4>;
   return (
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand pb-0" href="#">
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+      <a class="navbar-brand" href="#">
         <h3 class="mb-0">Auctions</h3>
       </a>
       <button
@@ -25,29 +24,29 @@ const Header = () => {
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link pb-0" href="#">
+            <a class="nav-link" href="#">
               Active Listings
             </a>
           </li>
 
           <li class="nav-item active">
-            <a class="nav-link pb-0" href="#">
+            <a class="nav-link" href="#">
               All Listings
             </a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link pb-0" href="#">
+            <a class="nav-link" href="#">
               Log Out
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link pb-0" href="#">
+            <a class="nav-link" href="#">
               Log In
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link pb-0" href="#">
+            <a class="nav-link" href="#">
               Register
             </a>
           </li>
