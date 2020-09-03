@@ -1,15 +1,22 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { getListings } from "../../redux/actions/listings";
 
-const ListingPage = ({ getListings, listings, name }) => {
+import { getListings } from "../../redux/actions/listings";
+import Listing from "./Listing";
+
+const ListingPage = ({ getListings, listings }) => {
   useEffect(() => {
     getListings();
   }, [getListings]);
   return (
     <div>
-      <h1>This is the ListingPage</h1>
+      <h1>Listings</h1>
+      <div className="row">
+        {listings.map(listing => (
+          <Listing listing={listing} key={listing.id} />
+        ))}
+      </div>
     </div>
   );
 };
@@ -21,7 +28,6 @@ ListingPage.propTypes = {
 
 const mapStateToProps = state => ({
   listings: state.listings.listings,
-  user: state.auth.user,
 });
 
 export default connect(mapStateToProps, { getListings })(ListingPage);
