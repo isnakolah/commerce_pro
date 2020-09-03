@@ -12,6 +12,7 @@ const Input = ({ label, onChange, name, value, type }) => {
         onChange={onChange}
         value={value}
         placeholder={label}
+        aria-placeholder={label}
       />
     </div>
   );

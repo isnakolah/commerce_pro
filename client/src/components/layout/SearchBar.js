@@ -21,7 +21,9 @@ const SearchBar = () => {
           onChange={onChange}
           value={search}
         />
-        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
+        <button
+          className="btn btn-outline-success my-2 my-sm-0 rounded"
+          type="submit">
           Search
         </button>
       </form>
