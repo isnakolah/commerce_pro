@@ -12,6 +12,8 @@ const ListingPage = ({ getListings, listings }) => {
   return (
     <div>
       <h1>Listings</h1>
+      <hr />
+      <br />
       <div className="row">
         {listings.map(listing => (
           <ListingCard listing={listing} key={listing.id} />
