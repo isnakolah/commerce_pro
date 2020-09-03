@@ -3,10 +3,9 @@ import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 
 const HeaderLinks = ({ to, label }) => {
-  const activeClass = "";
   return (
     <li className="nav-item">
-      <NavLink to={to} activeClassName="active" className="nav-link">
+      <NavLink exact to={to} activeClassName="active" className="nav-link">
         {label}
       </NavLink>
     </li>

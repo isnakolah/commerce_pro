@@ -1,19 +1,19 @@
 import React from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 import SearchBar from "./SearchBar";
 import HeaderLinks from "../common/HeaderLinks";
 
-const guestLinks = "";
-
 const Header = () => {
+  const guestLinks = "";
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-info">
       <div className="container">
-        <a className="navbar-brand" href="/">
+        <Link to="/" className="navbar-brand">
           <h3 className="mb-0">Auctions</h3>
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
